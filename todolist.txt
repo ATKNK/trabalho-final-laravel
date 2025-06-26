@@ -1,0 +1,23 @@
+MIGRATIONS:
+
+- Classes: OK
+- Weapons: OK
+- Armors: OK
+- Accessories: OK
+
+MODELS:
+
+- PlayerClass: nada
+- Weapon: falta relacionamentos
+- Armor: falta relacionamentos
+- Accessory: falta relacionamentos
+
+CONTROLLERS:
+
+- ClassController: nada
+- WeaponController: nada
+- ArmorController: nada
+- AccessoryController: nada
+
+ROTAS:
+
