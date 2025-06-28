@@ -7,7 +7,7 @@ MIGRATIONS:
 
 MODELS:
 
-- PlayerClass: nada
+- PlayerClass: falta relacionamentos
 - Weapon: falta relacionamentos
 - Armor: falta relacionamentos
 - Accessory: falta relacionamentos
