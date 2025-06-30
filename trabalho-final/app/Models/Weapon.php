@@ -18,4 +18,8 @@ class Weapon extends Model
         'attackSpeed',
         'classId',
     ];
+
+    public function PlayerClass(){
+        return $this->belongsTo(PlayerClass::class);
+    }
 }

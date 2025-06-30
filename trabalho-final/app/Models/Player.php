@@ -17,4 +17,8 @@ class Player extends Model
         'mana',
         'class',
     ];
+
+    public function PlayerClass(){
+        return $this->belongsTo(PlayerClass::class);
+    }
 }

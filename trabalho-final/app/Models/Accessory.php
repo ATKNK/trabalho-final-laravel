@@ -16,4 +16,8 @@ class Accessory extends Model
         'effect',
         'effectModifier',
     ];
+
+    public function PlayerClass(){
+        return $this->belongsTo(PlayerClass::class);
+    }
 }
