@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('effect');
-            $table->int('effectModifier');
+            $table->integer('effectModifier');
+            $table->foreignId('class_id')->constrained('classes');
             $table->timestamps();
         });
     }

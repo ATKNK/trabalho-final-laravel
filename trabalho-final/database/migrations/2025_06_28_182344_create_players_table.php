@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('players', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->int('health');
-            $table->int('mana');
-            $table->foreign('classId')->references('id')->on('classes');
+            $table->integer('health');
+            $table->integer('mana');
+            $table->foreignId('class_id')->constrained('classes');
             $table->timestamps();
         });
     }

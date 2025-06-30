@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('setBonus');
-            $table->int('setBonusModifier');
-            $table->int('defense');
+            $table->integer('setBonusModifier');
+            $table->integer('defense');
+            $table->foreignId('class_id')->constrained('classes');
             $table->timestamps();
         });
     }

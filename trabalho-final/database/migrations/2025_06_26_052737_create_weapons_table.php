@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('weapon', function (Blueprint $table) {
+        Schema::create('weapons', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->int('baseDamage');
-            $table->int('knockback');
-            $table->int('attackSpeed');
-            $table->foreign('classId')->references('id')->on('classes');
+            $table->integer('baseDamage');
+            $table->integer('knockback');
+            $table->integer('attackSpeed');
+            $table->foreignId('class_id')->constrained('classes');
             $table->timestamps();
         });
     }
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('weapon');
+        Schema::dropIfExists('weapons');
     }
 };
