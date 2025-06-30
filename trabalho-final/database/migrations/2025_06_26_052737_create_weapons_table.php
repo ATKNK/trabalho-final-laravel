@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->integer('baseDamage');
-            $table->integer('knockback');
+            $table->double('knockback');
             $table->integer('attackSpeed');
             $table->foreignId('class_id')->constrained('classes');
             $table->timestamps();
