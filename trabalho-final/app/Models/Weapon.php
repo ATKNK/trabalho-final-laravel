@@ -20,6 +20,6 @@ class Weapon extends Model
     ];
 
     public function PlayerClass(){
-        return $this->belongsTo(PlayerClass::class);
+        return $this->belongsTo(PlayerClass::class, 'classId');
     }
 }

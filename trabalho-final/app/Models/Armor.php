@@ -16,9 +16,10 @@ class Armor extends Model
         'setBonus',
         'setBonusModifier',
         'defense',
+        'classId',
     ];
 
     public function PlayerClass(){
-        return $this->belongsTo(PlayerClass::class);
+        return $this->belongsTo(PlayerClass::class, 'classId');
     }
 }

@@ -15,10 +15,10 @@ class Player extends Model
         'name',
         'health',
         'mana',
-        'class',
+        'classId',
     ];
 
     public function PlayerClass(){
-        return $this->belongsTo(PlayerClass::class);
+        return $this->belongsTo(PlayerClass::class, 'classId');
     }
 }

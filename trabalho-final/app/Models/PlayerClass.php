@@ -22,6 +22,10 @@ class PlayerClass extends Model
         return $this->hasMany(Armor::class);
     }
 
+    public function Player(){
+        return $this->hasMany(Player::class);
+    }
+
     public function Weapon(){
         return $this->hasMany(Weapon::class);
     }

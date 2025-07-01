@@ -15,9 +15,10 @@ class Accessory extends Model
         'name',
         'effect',
         'effectModifier',
+        'classId',
     ];
 
     public function PlayerClass(){
-        return $this->belongsTo(PlayerClass::class);
+        return $this->belongsTo(PlayerClass::class, 'classId');
     }
 }
