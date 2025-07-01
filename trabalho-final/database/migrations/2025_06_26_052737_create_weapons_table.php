@@ -17,7 +17,7 @@ return new class extends Migration
             $table->integer('baseDamage');
             $table->double('knockback');
             $table->integer('attackSpeed');
-            $table->foreignId('class_id')->constrained('classes');
+            $table->foreignId('classId')->constrained('classes');
             $table->timestamps();
             $table->softDeletes();
         });
