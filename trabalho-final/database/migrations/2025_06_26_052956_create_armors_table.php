@@ -19,6 +19,7 @@ return new class extends Migration
             $table->integer('defense');
             $table->foreignId('class_id')->constrained('classes');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

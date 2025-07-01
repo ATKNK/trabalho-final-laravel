@@ -18,6 +18,7 @@ return new class extends Migration
             $table->integer('mana');
             $table->foreignId('class_id')->constrained('classes');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
