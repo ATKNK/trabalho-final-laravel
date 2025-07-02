@@ -14,10 +14,12 @@ MODELS:
 
 CONTROLLERS:
 
-- ClassController: nada
-- WeaponController: nada
-- ArmorController: nada
-- AccessoryController: nada
+- ClassController: OK  
+- WeaponController: OK
+- ArmorController: OK
+- AccessoryController: OK
 
-ROTAS:
+ROTAS::
+
+- Resources: OK
 
