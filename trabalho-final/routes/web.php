@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccessoryController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PlayerClassController;
@@ -13,3 +14,4 @@ Route::get('/', function () {
 Route::resource('/classes', PlayerClassController::class);
 Route::resource('/weapons', WeaponController::class);
 Route::resource('/armors', ArmorController::class);
+Route::resource('/accessories', AccessoryController::class);
