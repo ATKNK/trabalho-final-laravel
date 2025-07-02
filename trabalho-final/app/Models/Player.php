@@ -18,6 +18,9 @@ class Player extends Model
         'classId',
     ];
 
+    public function Setup(){
+        return $this->hasMany(Setup::class, 'playerId');
+    }
     public function PlayerClass(){
         return $this->belongsTo(PlayerClass::class, 'classId');
     }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AccessoryController;
 use App\Http\Controllers\PlayerController;
+use App\Http\Controllers\SetupController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PlayerClassController;
@@ -17,3 +18,4 @@ Route::resource('/weapons', WeaponController::class);
 Route::resource('/armors', ArmorController::class);
 Route::resource('/accessories', AccessoryController::class);
 Route::resource('/players', PlayerController::class);
+Route::resource('/setups', SetupController::class);

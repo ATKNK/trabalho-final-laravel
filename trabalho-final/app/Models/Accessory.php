@@ -18,6 +18,9 @@ class Accessory extends Model
         'classId',
     ];
 
+    public function Setup(){
+        return $this->hasMany(Setup::class, 'accessoriesId');
+    }
     public function PlayerClass(){
         return $this->belongsTo(PlayerClass::class, 'classId');
     }

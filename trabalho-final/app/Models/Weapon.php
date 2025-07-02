@@ -18,6 +18,9 @@ class Weapon extends Model
         'attackSpeed',
         'classId',
     ];
+    public function Setup(){
+        return $this->hasMany(Setup::class, 'weaponId');
+    }
 
     public function PlayerClass(){
         return $this->belongsTo(PlayerClass::class, 'classId');

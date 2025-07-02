@@ -17,6 +17,7 @@
         <a href="/armors">Armors</a>
         <a href="/accessories">Accessories</a>
         <a href="/players">Players</a>
+        <a href="/setups">Setups</a>
     </div>
 </body>
 

@@ -19,6 +19,9 @@ class Armor extends Model
         'classId',
     ];
 
+    public function Setup(){
+        return $this->hasMany(Setup::class, 'armorId');
+    }
     public function PlayerClass(){
         return $this->belongsTo(PlayerClass::class, 'classId');
     }
