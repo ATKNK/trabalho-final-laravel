@@ -15,5 +15,6 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(PlayerClassSeeder::class);
         $this->call(WeaponSeeder::class);
+        $this->call(ArmorSeeder::class);
     }
 }
