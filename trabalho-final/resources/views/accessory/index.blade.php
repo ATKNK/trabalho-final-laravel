@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <h1>Armors:</h1>
+    <h1>Accessories:</h1>
         <a href="{{ route('accessories.create') }}">Create</a>
 
     @foreach ($accessories as $accessory)
