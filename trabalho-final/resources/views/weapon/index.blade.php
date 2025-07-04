@@ -1,34 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layout.base')
+@section('content')
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
+    <div class="w-full flex flex-row justify-between items-center">
+        <h1 class="text-4xl">Weapons:</h1>
+        <a class="bg-sky-600 p-3 m-1 rounded-xl" href="{{ route('weapons.create') }}">Create</a>
+    </div>
 
-<body>
-    <h1>Weapons:</h1>
-    <a href="{{ route('weapons.create') }}">Create</a>
 
-    @foreach ($weapons as $weapon)
-        <div>
-            <h1>{{ $weapon->name }}</h1>
-            <ul>
-                <li>Damage: {{ $weapon->baseDamage }}</li>
-                <li>Knockback: {{ $weapon->knockback }}</li>
-                <li>Attack Speed: {{ $weapon->attackSpeed }}</li>
-                <li>Class: {{ $weapon->playerClass->name }}</li>
-            </ul>
-            <a href="{{ route('weapons.edit', $weapon->id) }}">Edit</a>
-            <form action="{{ route('weapons.destroy', $weapon->id) }}" method="POST">
-                @csrf
-                @method('DELETE')
-                <button type="submit">Delete</button>
-            </form>
-        </div>
-    @endforeach
-</body>
+    <div>
 
-</html>
+
+        @foreach ($weapons as $weapon)
+            <div class="bg-sky-800 p-3 m-6">
+                <h1 class="text-xl">{{ $weapon->name }}</h1>
+                <ul class="p-3">
+                    <li>Damage: {{ $weapon->baseDamage }}</li>
+                    <li>Knockback: {{ $weapon->knockback }}</li>
+                    <li>Attack Speed: {{ $weapon->attackSpeed }}</li>
+                    <li>Class: {{ $weapon->playerClass->name }}</li>
+                </ul>
+                <div class="flex flex-row justify-between items-center">
+                    <a class="bg-sky-600 p-3 m-1 rounded-xl" href="{{ route('weapons.edit', $weapon->id) }}">Edit</a>
+                    <form class="bg-sky-600 p-3 rounded-xl" action="{{ route('weapons.destroy', $weapon->id) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit">Delete</button>
+                    </form>
+                </div>
+            </div>
+        @endforeach
+    </div>
+@endsection
