@@ -1,38 +1,39 @@
 @extends('layout.base')
 @section('content')
+<div class="flex flex-col justify-center items-center">
     <div class="w-full flex flex-row justify-between items-center">
         <h1 class="text-4xl">Creating a Weapon:</h1>
-        <a class="bg-sky-600 p-3 m-1 rounded-xl" href="{{ route('weapons.create') }}">Create</a>
+        <a class="bg-sky-600 p-3 m-1 rounded-xl" href="{{ route('weapons.index') }}">Back</a>
     </div>
 
-    <div>
+    <div class="flex flex-col w-5/7">
         <form action="{{ route('weapons.store') }}" method="POST">
             @csrf
 
             <div class="bg-sky-800 p-3 m-6 md:w-4/5 rounded-xl">
-                <div>
-                    <label for="name">Name: </label>
-                    <input type="text" name="name" required>
+                <div class="flex flex-row justify-between m-3">
+                    <label class="text-lg" for="name">Name: </label>
+                    <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="name" required>
                 </div>
 
-                <div>
-                    <label for="baseDamage">Base Damage: </label>
-                    <input type="text" name="baseDamage" required>
+                <div class="flex flex-row justify-between m-3">
+                    <label class="text-lg" for="baseDamage">Base Damage: </label>
+                    <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="baseDamage" required>
                 </div>
 
-                <div>
-                    <label for="knockback">Knockback: </label>
-                    <input type="text" name="knockback" required>
+                <div class="flex flex-row justify-between m-3">
+                    <label class="text-lg" for="knockback">Knockback: </label>
+                    <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="knockback" required>
                 </div>
 
-                <div>
-                    <label for="attackSpeed">Attack Speed: </label>
-                    <input type="text" name="attackSpeed" required>
+                <div class="flex flex-row justify-between m-3">
+                    <label class="text-lg" for="attackSpeed">Attack Speed: </label>
+                    <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="attackSpeed" required>
                 </div>
 
-                <div>
-                    <label for="classId">Class: </label>
-                    <select name="classId" required>
+                <div class="flex flex-row justify-between m-3">
+                    <label class="text-lg" for="classId">Class: </label>
+                    <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="classId" required>
                         <option value="">Select a class</option>
                         @foreach ($classes as $class)
                             <option value="{{ $class->id }}">
@@ -43,7 +44,8 @@
                 </div>
             </div>
 
-            <button type="submit">Save</button>
+            <button class="bg-sky-600 p-3 rounded-xl cursor-pointer" style="text-shadow: 2px 2px 2px black" type="submit">Save</button>
         </form>
     </div>
+</div>
 @endsection
