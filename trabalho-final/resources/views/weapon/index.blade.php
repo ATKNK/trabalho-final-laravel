@@ -9,7 +9,7 @@
     <div class="grid grid-cols-1 md:grid-cols-3 justify-items-center">
         @foreach ($weapons as $weapon)
             <div class="bg-sky-800 p-3 m-6 md:w-4/5 rounded-xl">
-                <h1 class="text-3xl">{{ $weapon->name }}</h1>
+                <h1 class="text-3xl" style="color: {{ $weapon->rarity_color }}">{{ $weapon->name }}</h1>
                 <ul class="p-3">
                     <li>Damage: {{ $weapon->baseDamage }}</li>
                     <li>Knockback: {{ $weapon->knockback }}</li>

@@ -32,6 +32,11 @@
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
+                        <label class="text-lg" for="rarity">Rarity: </label>
+                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="rarity" required>
+                    </div>
+
+                    <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="classId">Class: </label>
                         <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="classId" required>
                             <option value="">Select a class</option>
@@ -42,7 +47,8 @@
                             @endforeach
                         </select>
                     </div>
-                    <button class="bg-sky-600 p-3 rounded-xl cursor-pointer" style="text-shadow: 2px 2px 2px black" type="submit">Save</button>
+                    <button class="bg-sky-600 p-3 rounded-xl cursor-pointer" style="text-shadow: 2px 2px 2px black"
+                        type="submit">Save</button>
             </form>
         </div>
 

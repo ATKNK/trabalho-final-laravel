@@ -28,6 +28,7 @@ class WeaponController extends Controller
         $weapon->baseDamage = $request->baseDamage;
         $weapon->knockback = $request->knockback;
         $weapon->attackSpeed = $request->attackSpeed;
+        $weapon->rarity = $request->rarity;
         $weapon->classId = $request->classId;
 
         $weapon->save();
