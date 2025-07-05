@@ -47,8 +47,7 @@
                             @endforeach
                         </select>
                     </div>
-                    <button class="bg-sky-600 p-3 rounded-xl cursor-pointer" style="text-shadow: 2px 2px 2px black"
-                        type="submit">Save</button>
+                    <button class="bg-sky-600 p-3 rounded-xl cursor-pointer" style="text-shadow: 2px 2px 2px black" type="submit">Save</button>
             </form>
         </div>
 

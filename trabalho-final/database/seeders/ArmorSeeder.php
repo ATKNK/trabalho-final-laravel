@@ -13,8 +13,9 @@ class ArmorSeeder extends Seeder
     public function run(): void
     {
         $data = [
-            ["name"=> "Wood Armor", "setBonus"=> "defense", "setBonusModifier"=> 1, "defense"=> 3, "classId"=> 1],
-            ["name"=> "Necro Armor", "setBonus"=> "Ranged Damage", "setBonusModifier"=> 10, "defense"=> 19, "classId"=> 2],
+            ["name" => "Wood Armor", "setBonus" => "defense", "setBonusModifier" => 1, "defense" => 3, 'rarity' => 0, "classId" => 1],
+            ["name" => "Necro Armor", "setBonus" => "Ranged Damage", "setBonusModifier" => 10, "defense" => 19, 'rarity' => 2, "classId" => 2],
+            ["name" => "Hallowed Armor", "setBonus" => "Dodge", "setBonusModifier" => 1, "defense" => 35, 'rarity' => 5, "classId" => 2]
         ];
         DB::table('armors')->insert($data);
     }

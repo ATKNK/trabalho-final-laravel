@@ -23,6 +23,7 @@ class ArmorController extends Controller
         $setBonus = $request->setBonus;
         $setBonusModifier = $request->setBonusModifier;
         $defense = $request->defense;
+        $rarity = $request->rarity;
         $classId = $request->classId;
 
         $armor = new Armor();
@@ -30,6 +31,7 @@ class ArmorController extends Controller
         $armor->setBonus = $setBonus;
         $armor->setBonusModifier = $setBonusModifier;
         $armor->defense = $defense;
+        $armor->rarity = $rarity;
         $armor->classId = $classId;
 
         $armor->save();
