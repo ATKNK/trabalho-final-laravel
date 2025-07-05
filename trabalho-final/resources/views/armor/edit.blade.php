@@ -34,7 +34,7 @@
 
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="rarity">Rarity: </label>
-                        <inputclass="border-1 border-stone-950 rounded-xl p-1" type="text" name="rarity" value="{{ $armor->rarity }}" required>
+                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="rarity" value="{{ $armor->rarity }}" required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">

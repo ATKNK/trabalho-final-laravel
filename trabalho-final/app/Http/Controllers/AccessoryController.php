@@ -22,12 +22,14 @@ class AccessoryController extends Controller
         $name = $request->name;
         $effect = $request->effect;
         $effectModifier = $request->effectModifier;
+        $rarity = $request->rarity;
         $classId = $request->classId;
 
         $accessory = new Accessory();
         $accessory->name = $name;
         $accessory->effect = $effect;
         $accessory->effectModifier = $effectModifier;
+        $accessory->rarity = $rarity;
         $accessory->classId = $classId;
 
         $accessory->save();

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('effect');
             $table->integer('effectModifier');
+            $table->integer('rarity');
             $table->foreignId('classId')->constrained('classes');
             $table->timestamps();
             $table->softDeletes();
