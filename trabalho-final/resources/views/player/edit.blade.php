@@ -1,47 +1,48 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <h1>Editing a player:</h1>
-    <form action="{{ route('players.update', $player->id) }}" method="POST">
-        @method('PUT')
-        @csrf
-
-        <div>
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" value="{{ $player->name }}" required>
-        </div>
-        
-        <div>
-            <label for="health">Health:</label>
-            <input type="number" id="health" name="health" value="{{ $player->health }}" required>
+@extends('layout.base')
+@section('content')
+    <div class="flex flex-col justify-center items-center">
+        <div class="w-full flex flex-row justify-between items-center">
+            <h1 class="text-4xl">Editing a Player:</h1>
+            <a class="bg-sky-600 p-3 m-1 rounded-xl" href="{{ route('players.index') }}">Back</a>
         </div>
 
-        <div>
-            <label for="mana">Mana:</label>
-            <input type="number" id="mana" name="mana" value="{{ $player->mana }}" required>
+        <div class="flex flex-col items-center">
+            <form class="w-xl" action="{{ route('players.update', $player->id) }}" method="POST">
+                @method('PUT')
+                @csrf
+                <div class="bg-sky-800 p-3 m-6 md:w-4/5 rounded-xl">
+                    <div class="flex flex-row justify-between m-3">
+                        <label class="text-lg" for="name">Name:</label>
+                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" id="name" name="name"
+                            value="{{ $player->name }}" required>
+                    </div>
+
+                    <div class="flex flex-row justify-between m-3">
+                        <label class="text-lg" for="health">Health:</label>
+                        <input class="border-1 border-stone-950 rounded-xl p-1" type="number" id="health" name="health"
+                            value="{{ $player->health }}" required>
+                    </div>
+
+                    <div class="flex flex-row justify-between m-3">
+                        <label class="text-lg" for="mana">Mana:</label>
+                        <input class="border-1 border-stone-950 rounded-xl p-1" type="number" id="mana" name="mana"
+                            value="{{ $player->mana }}" required>
+                    </div>
+
+                    <div class="flex flex-row justify-between m-3">
+                        <label class="text-lg" for="classId">Class: </label>
+                        <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="classId" required>
+                            <option value="">Select a class</option>
+                            @foreach ($classes as $class)
+                                <option value="{{ $class->id }}">
+                                    {{ $class->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <button class="bg-sky-600 p-3 rounded-xl cursor-pointer" style="text-shadow: 2px 2px 2px black" type="submit">Save</button>
+                </div>
+            </form>
         </div>
-
-        <div>
-            <label for="classId">Class: </label>
-            <select name="classId" required>
-                <option value="">Select a class</option>
-                @foreach ($classes as $class)
-                    <option value="{{ $class->id }}">
-                        {{ $class->name }}
-                    </option>
-                @endforeach
-            </select>
-        </div>
-
-        <button type="submit">Save</button>
-    </form>
-</body>
-
-</html>
+    </div>
+@endsection
