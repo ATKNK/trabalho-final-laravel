@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'role',
     ];
 
     /**
@@ -44,5 +45,13 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+
+    public function isPlayer(){
+        return !is_null($this->player_id);
+    }
+
+    public function isAdmin(){
+        return is_null($this->player_id);
     }
 }

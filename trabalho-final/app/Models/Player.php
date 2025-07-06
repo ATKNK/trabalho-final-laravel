@@ -16,7 +16,12 @@ class Player extends Model
         'health',
         'mana',
         'classId',
+        'userId',
     ];
+
+    public function User(){
+        return $this->belongsTo(User::class);
+    }
 
     public function Setup(){
         return $this->hasMany(Setup::class, 'playerId');
