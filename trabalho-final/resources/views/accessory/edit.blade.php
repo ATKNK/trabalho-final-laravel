@@ -14,22 +14,22 @@
                     <div class="bg-sky-800 p-3 m-6 md:w-4/5 rounded-xl">
                         <div class="flex flex-row justify-between m-3">
                             <label for="name">Name: </label>
-                            <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="name" value="{{ $accessory->name }}" required>
+                            <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="name" value="{{ $accessory->name }}" required>
                         </div>
 
                         <div class="flex flex-row justify-between m-3">
                             <label for="effect">Effect: </label>
-                            <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="effect" value="{{ $accessory->effect }}" required>
+                            <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="effect" value="{{ $accessory->effect }}" required>
                         </div>
 
                         <div class="flex flex-row justify-between m-3">
                             <label for="effectModifier">Effect Modifier: </label>
-                            <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="effectModifier" value="{{ $accessory->effectModifier }}" required>
+                            <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="effectModifier" value="{{ $accessory->effectModifier }}" required>
                         </div>
 
                         <div class="flex flex-row justify-between m-3">
                             <label for="effectModifier">Rarity: </label>
-                            <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="rarity" value="{{ $accessory->rarity }}" required>
+                            <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="rarity" value="{{ $accessory->rarity }}" required>
                         </div>
 
                         <div class="flex flex-row justify-between m-3">

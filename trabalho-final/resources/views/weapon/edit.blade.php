@@ -14,31 +14,31 @@
                 <div class="bg-sky-800 p-3 m-6 md:w-4/5 rounded-xl">
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="name">Name: </label>
-                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="name"
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="name"
                             value="{{ $weapon->name }}" required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="baseDamage">Base Damage: </label>
-                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="baseDamage"
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="baseDamage"
                             value="{{ $weapon->baseDamage }}" required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="knockback">Knockback: </label>
-                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="knockback"
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="knockback"
                             value="{{ $weapon->knockback }}" required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="attackSpeed">Attack Speed: </label>
-                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="attackSpeed"
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="attackSpeed"
                             value="{{ $weapon->attackSpeed }}" required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="attackSpeed">Rarity: </label>
-                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="rarity"
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="rarity"
                             value="{{ $weapon->rarity }}" required>
                     </div>
 

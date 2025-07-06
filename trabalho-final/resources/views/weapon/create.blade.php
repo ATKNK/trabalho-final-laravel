@@ -13,27 +13,27 @@
                 <div class="bg-sky-800 p-3 m-6 md:w-4/5 rounded-xl">
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="name">Name: </label>
-                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="name" required>
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="name" required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="baseDamage">Base Damage: </label>
-                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="baseDamage" required>
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="baseDamage" required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="knockback">Knockback: </label>
-                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="knockback" required>
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="knockback" required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="attackSpeed">Attack Speed: </label>
-                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="attackSpeed" required>
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="attackSpeed" required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="rarity">Rarity: </label>
-                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" name="rarity" required>
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="rarity" required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">

@@ -13,7 +13,10 @@
     </div>
 
     <div class="flex flex-row items-center space-x-2">
-        <a class="bg-sky-600 p-3 rounded-xl" href="">User</a>
-        <a class="bg-sky-600 p-3 rounded-xl" href="">Logout</a>
+        <a class="bg-sky-600 p-3 rounded-xl" href="{{route('profile.edit')}}">{{ Auth::user()->name ?? "Login" }}</a>
+        <form class="bg-sky-600 p-3 rounded-xl" action="{{route('logout')}}" method="POST">
+            @csrf
+            <button class="bg-sky-600 rounded-xl cursor-pointer" style="text-shadow: 2px 2px 2px black">Logout</button >
+        </form>
     </div>
 </nav>
