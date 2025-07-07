@@ -12,9 +12,13 @@
                     <h1 class="text-3xl" style="color: {{ $armor->rarity_color }}">{{ $armor->name }}</h1>
                     <ul class="p-3">
                         <li>Name: {{ $armor->name }}</li>
-                        <li>Set Bonus: {{ $armor->setBonus }} {{ $armor->setBonusModifier }}</li>
-                        <li>Defense: {{ $armor->defense }}</li>
-                        <li>Class: {{ $armor->playerClass->name }}</li>
+                        <li>Defense: {{$armor->defense}}</li>
+                        <li>Set Bonus:
+                            {{ $armor->modifier->name ?? 'None' }}
+                            {{ $armor->setBonusModifier ?? '' }}
+                        </li>
+                        <li>Class: {{ $armor->playerClass->name ?? 'No Class' }}</li>
+
                     </ul>
                     <div class="flex flex-row justify-between items-center">
                         <a class="bg-sky-600 p-3 m-1 rounded-xl" href="{{ route('armors.edit', $armor->id) }}">Edit</a>

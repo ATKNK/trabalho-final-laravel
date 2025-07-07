@@ -9,14 +9,18 @@ use App\Models\Armor;
 use App\Models\Player;
 use App\Models\Weapon;
 
+use App\Services\ModifierService;
+
 class SetupController extends Controller
 {
-    public function index(){
+    public function index()
+    {
         $setups = Setup::all();
         return view('setup.index')->with(['setups' => $setups]);
     }
 
-    public function create(){
+    public function create()
+    {
         $accessories = Accessory::all();
         $armors = Armor::all();
         $players = Player::all();
@@ -25,7 +29,8 @@ class SetupController extends Controller
         return view('setup.create', compact('accessories', 'armors', 'players', 'weapons'));
     }
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $setup = new Setup();
 
         $setup->playerId = $request->playerId;
@@ -38,31 +43,39 @@ class SetupController extends Controller
         return redirect()->route('setups.index')->with('success', 'Setup created successfully!');
     }
 
-    public function show(Setup $setup){
+    public function show(Setup $setup, ModifierService $modifierService)
+    {
+        $setup->load(['weapon', 'armor.modifier']);
 
         $baseDmg = $setup->weapon->baseDamage;
         $atkSpeed = round(60 / $setup->weapon->attackSpeed);
 
-        $modifiers = 0;
+        $totalDefense = floatval($setup->armor->defense ?? 0);
+        $bonus = floatval($setup->armor->setBonusModifier ?? 0);
+        $modifierId = $setup->armor->modifier_id ?? null;
 
-        $dps = ($baseDmg + $modifiers) * $atkSpeed;
+        if ($modifierId == 3) {
+            $totalDefense = $modifierService->applyByModifierId($totalDefense, $bonus, $modifierId);
+        }
 
-        $defense = $setup->armor->defense ?? 0;
+        $dps = $baseDmg * $atkSpeed;
 
-        return view('setup.show', compact('setup', 'dps', 'defense'));
+        return view('setup.show', compact('setup', 'dps', 'totalDefense'));
     }
 
-    public function edit($id){
+    public function edit($id)
+    {
         $accessories = Accessory::all();
         $armors = Armor::all();
         $players = Player::all();
         $weapons = Weapon::all();
         $setup = Setup::findOrFail($id);
-        
+
         return view('setup.edit', compact('accessories', 'armors', 'players', 'weapons', 'setup'));
     }
 
-    public function update(Request $request, $id){
+    public function update(Request $request, $id)
+    {
         $setup = Setup::find($id);
         $setup->update($request->all());
         $setup->save();
@@ -70,7 +83,8 @@ class SetupController extends Controller
         return redirect()->route('setups.index')->with('success', 'Setup updated successfully!');
     }
 
-    public function destroy(Setup $setup){
+    public function destroy(Setup $setup)
+    {
         $setup->delete();
         return redirect()->route('setups.index')->with('success', 'Setup deleted successfully!');
     }

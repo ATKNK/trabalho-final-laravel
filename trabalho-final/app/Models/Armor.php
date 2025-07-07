@@ -29,6 +29,10 @@ class Armor extends Model
         return $this->belongsTo(PlayerClass::class, 'classId');
     }
 
+    public function Modifier(){
+        return $this->belongsTo(Modifier::class, 'modifierId');
+    }
+
     public static function rarityColors(): array
     {
         return [

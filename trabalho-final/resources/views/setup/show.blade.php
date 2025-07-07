@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col p-3">
-                    <div class="flex flex-row text-2xl">Total Defense: {{ $defense }}</div>
+                    <div class="flex flex-row text-2xl">Total Defense: {{ $totalDefense }}</div>
                     <div class="flex flex-row text-2xl">Base Damage: {{ $setup->weapon->baseDamage }}</div>
                     <div class="flex flex-row text-2xl">Damage Per Second: {{ $dps }}</div>
                 </div>

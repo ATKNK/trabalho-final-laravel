@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('armors', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('setBonus');
+            $table->foreignId('modifierId')->nullable()->constrained('modifiers')->onDelete('set null');
             $table->integer('setBonusModifier');
             $table->integer('defense');
             $table->integer('rarity');

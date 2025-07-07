@@ -14,9 +14,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+        $this->call(ModifierSeeder::class);
         $this->call(PlayerClassSeeder::class);
         $this->call(WeaponSeeder::class);
         $this->call(ArmorSeeder::class);
         $this->call(AccessorySeeder::class);
+        $this->call(UserSeeder::class);
     }
 }

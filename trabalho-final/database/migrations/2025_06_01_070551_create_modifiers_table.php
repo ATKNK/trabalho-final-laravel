@@ -11,15 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('accessories', function (Blueprint $table) {
+        Schema::create('modifiers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->foreignId('modifierId')->nullable()->constrained('modifiers')->onDelete('set null');
-            $table->integer('effectModifier');
-            $table->integer('rarity');
-            $table->foreignId('classId')->constrained('classes');
+            $table->string('math');
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -28,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('accessories');
+        Schema::dropIfExists('modifiers');
     }
 };

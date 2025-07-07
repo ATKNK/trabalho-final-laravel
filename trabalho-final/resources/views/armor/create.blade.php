@@ -13,28 +13,38 @@
                 <div class="bg-sky-800 p-3 m-6 md:w-4/5 rounded-xl">
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="name">Name: </label>
-                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="name" required>
-                    </div>
-
-                    <div class="flex flex-row justify-between m-3">
-                        <label class="text-lg" for="setBonus">Set Bonus: </label>
-                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="setBonus" required>
-                    </div>
-
-                    <div class="flex flex-row justify-between m-3">
-                        <label class="text-lg" for="setBonusModifier">Set Bonus Modifier: </label>
-                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="setBonusModifier"
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="name"
                             required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
+                        <label class="text-lg" for="modifierId">Modifier: </label>
+                        <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="modifierId" required>
+                            <option value="">Select a modifier</option>
+                            @foreach ($modifiers as $modifier)
+                                <option value="{{ $modifier->id }}">
+                                    {{ $modifier->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
+
+                    <div class="flex flex-row justify-between m-3">
+                        <label class="text-lg" for="setBonusModifier">Set Bonus Modifier: </label>
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="number"
+                            name="setBonusModifier" required>
+                    </div>
+
+                    <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="defense">Defense: </label>
-                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="defense" required>
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="number" name="defense"
+                            required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="rarity">Rarity: </label>
-                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="rarity" required>
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" name="rarity"
+                            required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
@@ -48,7 +58,8 @@
                             @endforeach
                         </select>
                     </div>
-                    <button class="bg-sky-600 p-3 rounded-xl cursor-pointer" style="text-shadow: 2px 2px 2px black"type="submit">Save</button>
+                    <button class="bg-sky-600 p-3 rounded-xl cursor-pointer"
+                        style="text-shadow: 2px 2px 2px black"type="submit">Save</button>
                 </div>
             </form>
         </div>
