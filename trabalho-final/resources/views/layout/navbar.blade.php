@@ -4,9 +4,10 @@
             <h1 class="font-bold text-xl p-5">Terraria Setup Creator</h1>
         </a>
         <div class=" flex flex-row items-center space-x-2">
+            <a class="bg-sky-600 p-3 rounded-xl" href="/classes">Classes</a>
             <a class="bg-sky-600 p-3 rounded-xl" href="/weapons">Weapons</a>
             <a class="bg-sky-600 p-3 rounded-xl" href="/armors">Armor</a>
-            <a class="bg-sky-600 p-3 rounded-xl" href="/accessories">Accessories</a>
+            <a class="bg-sky-600 p-3 rounded-xl" href="/accessories">Accessories</a> 
             <a class="bg-sky-600 p-3 rounded-xl" href="/players">Players</a>
             <a class="bg-sky-600 p-3 rounded-xl" href="/setups">Setups</a>
         </div>

@@ -13,17 +13,17 @@
 
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="name">Name:</label>
-                        <input class="border-1 border-stone-950 rounded-xl p-1" type="text" id="name" name="name" required>
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="text" id="name" name="name" required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="health">Health:</label>
-                        <input class="border-1 border-stone-950 rounded-xl p-1" type="number" id="health" name="health" required>
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="number" id="health" name="health" required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">
                         <label class="text-lg" for="mana">Mana:</label>
-                        <input class="border-1 border-stone-950 rounded-xl p-1" type="number" id="mana" name="mana" required>
+                        <input class="bg-sky-700 border-1 border-stone-950 rounded-xl p-1" type="number" id="mana" name="mana" required>
                     </div>
 
                     <div class="flex flex-row justify-between m-3">

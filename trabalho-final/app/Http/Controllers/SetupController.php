@@ -39,7 +39,17 @@ class SetupController extends Controller
     }
 
     public function show(Setup $setup){
-        return view('setup.show', compact('setup'));
+
+        $baseDmg = $setup->weapon->baseDamage;
+        $atkSpeed = round(60 / $setup->weapon->attackSpeed);
+
+        $modifiers = 0;
+
+        $dps = ($baseDmg + $modifiers) * $atkSpeed;
+
+        $defense = $setup->armor->defense ?? 0;
+
+        return view('setup.show', compact('setup', 'dps', 'defense'));
     }
 
     public function edit($id){
