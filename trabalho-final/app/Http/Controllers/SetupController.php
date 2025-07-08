@@ -52,10 +52,12 @@ class SetupController extends Controller
 
         $totalDefense = floatval($setup->armor->defense ?? 0);
         $bonus = floatval($setup->armor->setBonusModifier ?? 0);
-        $modifierId = $setup->armor->modifier_id ?? null;
+        $modifierId = $setup->armor->modifierId ?? null;
 
-        if ($modifierId == 3) {
+        if ($modifierId) {
             $totalDefense = $modifierService->applyByModifierId($totalDefense, $bonus, $modifierId);
+            $atkSpeed = $modifierService->applyByModifierId($atkSpeed, $bonus, $modifierId);
+            $baseDmg = $modifierService->applyByModifierId($baseDmg, $bonus, $modifierId);
         }
 
         $dps = $baseDmg * $atkSpeed;
