@@ -9,6 +9,7 @@ use App\Http\Controllers\ArmorController;
 use App\Http\Controllers\AccessoryController;
 use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\SetupController;
+use App\Http\Controllers\AiSetupController;
 
 use App\Http\Middleware\IsPlayer;
 use App\Http\Middleware\IsAdmin;
@@ -27,18 +28,16 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware(['auth', IsPlayer::class])->group(function () {
+Route::middleware(['auth', IsPlayer::class])->group(function () {});
 
-});
-
-Route::middleware(['auth', IsAdmin::class])->group(function (){
+Route::middleware(['auth', IsAdmin::class])->group(function () {
     Route::resource('/classes', PlayerClassController::class);
     Route::resource('/weapons', WeaponController::class);
     Route::resource('/armors', ArmorController::class);
     Route::resource('/accessories', AccessoryController::class);
-    Route::resource('/players', PlayerController::class);
-    Route::resource('/setups', SetupController::class);    
 });
 
+Route::resource('/players', PlayerController::class);
+Route::resource('/setups', SetupController::class);
 
 require __DIR__ . '/auth.php';

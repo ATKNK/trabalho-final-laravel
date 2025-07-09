@@ -67,7 +67,7 @@
                             <label class="text-lg" for="accessory3Id">Accessory:</label>
                             <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="accessory3Id"
                                 id="accessory3Id">
-                                <option value="{{null}}">-</option>
+                                <option value="{{ null }}">-</option>
                                 @foreach ($accessories as $accessory)
                                     <option value="{{ $accessory->id }}">{{ $accessory->name }}</option>
                                 @endforeach
@@ -77,7 +77,7 @@
                             <label class="text-lg" for="accessory4Id">Accessory:</label>
                             <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="accessory4Id"
                                 id="accessory4Id">
-                                <option value="{{null}}">-</option>
+                                <option value="{{ null }}">-</option>
                                 @foreach ($accessories as $accessory)
                                     <option value="{{ $accessory->id }}">{{ $accessory->name }}</option>
                                 @endforeach
@@ -87,7 +87,7 @@
                             <label class="text-lg" for="accessory5Id">Accessory:</label>
                             <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="accessory5Id"
                                 id="accessory5Id">
-                                <option value="{{null}}">-</option>
+                                <option value="{{ null }}">-</option>
                                 @foreach ($accessories as $accessory)
                                     <option value="{{ $accessory->id }}">{{ $accessory->name }}</option>
                                 @endforeach
@@ -97,7 +97,7 @@
                             <label class="text-lg" for="accessory6Id">Accessory:</label>
                             <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="accessory6Id"
                                 id="accessory6Id">
-                                <option value="{{null}}">-</option>
+                                <option value="{{ null }}">-</option>
                                 @foreach ($accessories as $accessory)
                                     <option value="{{ $accessory->id }}">{{ $accessory->name }}</option>
                                 @endforeach
@@ -107,6 +107,7 @@
                             <label class="text-lg" for="accessory7Id">Accessory:</label>
                             <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="accessory7Id"
                                 id="accessory7Id">
+                                <option value="{{ null }}">-</option>
                                 @foreach ($accessories as $accessory)
                                     <option value="{{ $accessory->id }}">{{ $accessory->name }}</option>
                                 @endforeach

@@ -22,7 +22,7 @@ class Logged
             return redirect()->route('/');
         }
         elseif ($user->role == 'player'){
-            return redirect()->route('dashboard-player');
+            return redirect()->route('dashboard');
         }
         return redirect()->route('login');
     }
