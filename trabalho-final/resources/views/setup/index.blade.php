@@ -16,14 +16,14 @@
                         </a>
                     </div>
                     <ul class="p-3">
-                        <li>Player: {{ $setup->player->name }}</li>
+                        <li>Player: {{ $setup->player->name ?? 'error' }}</li>
                         <li class="flex flex-row">Weapon: <p style="color: {{ $setup->weapon->rarity_color }}">
                                 {{ $setup->weapon->name }}</p>
                         </li>
                         <li class="flex flex-row">Armor: <p style="color: {{ $setup->armor->rarity_color }}">
                                 {{ $setup->armor->name }}</p>
                         </li>
-                        <li class="flex flex-row">Class: {{ $setup->player->PlayerClass->name }}</li>
+                        <li class="flex flex-row">Class: {{ $setup->player->PlayerClass->name ?? 'error'}}</li>
                     </ul>
                     <div class="flex flex-row justify-between items-center">
                         <a class="bg-sky-600 p-3 m-1 rounded-xl" href="{{ route('setups.edit', $setup->id) }}">Edit</a>

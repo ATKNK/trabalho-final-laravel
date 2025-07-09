@@ -113,6 +113,7 @@
                             <label class="text-lg" for="accessory7Id">Accessory:</label>
                             <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="accessory7Id"
                                 id="accessory7Id">
+                                <option value="{{ null }}">-</option>
                                 @foreach ($accessories as $accessory)
                                     <option value="{{ $accessory->id }}">{{ $accessory->name }}</option>
                                 @endforeach
