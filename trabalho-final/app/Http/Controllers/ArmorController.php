@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Armor;
+use App\Models\Modifier;
 use App\Models\PlayerClass;
 
 class ArmorController extends Controller
@@ -14,13 +15,14 @@ class ArmorController extends Controller
     }
 
     public function create(){
+        $modifiers = Modifier::all();
         $classes = PlayerClass::all();
-        return view('armor.create', compact('classes'));
+        return view('armor.create', compact('classes', 'modifiers'));
     }
 
     public function store(Request $request){
         $name = $request->name;
-        $setBonus = $request->setBonus;
+        $modifierId = $request->modifierId;
         $setBonusModifier = $request->setBonusModifier;
         $defense = $request->defense;
         $rarity = $request->rarity;
@@ -28,7 +30,7 @@ class ArmorController extends Controller
 
         $armor = new Armor();
         $armor->name = $name;
-        $armor->setBonus = $setBonus;
+        $armor->modifierId = $modifierId;
         $armor->setBonusModifier = $setBonusModifier;
         $armor->defense = $defense;
         $armor->rarity = $rarity;

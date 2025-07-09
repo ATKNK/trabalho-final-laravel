@@ -11,7 +11,7 @@
                 <h1 class="text-3xl" style="color: {{ $accessory->rarity_color }}">{{ $accessory->name }}</h1>
                 <ul class="p-3">
                     <li>Name: {{ $accessory->name }}</li>
-                    <li>Effect: {{ $accessory->effect }} {{ $accessory->effectModifier }}</li>
+                    <li>Effect: {{ $accessory->modifier->name ?? 'error' }} {{ $accessory->effectModifier }}</li>
                 </ul>
                 <div class="flex flex-row justify-between items-center">
                     <a class="bg-sky-600 p-3 m-1 rounded-xl" href="{{ route('accessories.edit', $accessory->id) }}">Edit</a>

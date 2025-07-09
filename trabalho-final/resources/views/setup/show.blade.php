@@ -16,13 +16,20 @@
                     <div class="flex flex-row text-2xl">Armor: <p style="color: {{ $setup->armor->rarity_color }}">
                             {{ $setup->armor->name }}</p>
                     </div>
-                    <div class="flex flex-row text-2xl">Accessory: <p style="color: {{ $setup->accessory->rarity_color }}">
-                            {{ $setup->accessory->name }}</p>
+                    <div class="flex flex-col text-2xl">Accessories: 
+                        <p style="color: {{ $setup->accessory1->rarity_color ?? '#FFFFFF' }}">{{ $setup->accessory1->name ?? '-'}}</p>
+                        <p style="color: {{ $setup->accessory2->rarity_color ?? '#FFFFFF' }}">{{ $setup->accessory2->name ?? '-'}}</p>
+                        <p style="color: {{ $setup->accessory3->rarity_color ?? '#FFFFFF' }}">{{ $setup->accessory3->name ?? '-'}}</p>
+                        <p style="color: {{ $setup->accessory4->rarity_color ?? '#FFFFFF' }}">{{ $setup->accessory4->name ?? '-'}}</p>
+                        <p style="color: {{ $setup->accessory5->rarity_color ?? '#FFFFFF' }}">{{ $setup->accessory5->name ?? '-'}}</p>
+                        <p style="color: {{ $setup->accessory6->rarity_color ?? '#FFFFFF' }}">{{ $setup->accessory6->name ?? '-'}}</p>
+                        <p style="color: {{ $setup->accessory7->rarity_color ?? '#FFFFFF' }}">{{ $setup->accessory7->name ?? '-'}}</p>
                     </div>
                 </div>
                 <div class="flex flex-col p-3">
                     <div class="flex flex-row text-2xl">Total Defense: {{ $totalDefense }}</div>
                     <div class="flex flex-row text-2xl">Base Damage: {{ $setup->weapon->baseDamage }}</div>
+                    <div class="flex flex-row text-2xl">Total Damage: {{$baseDmg}}</div>
                     <div class="flex flex-row text-2xl">Damage Per Second: {{ $dps }}</div>
                 </div>
             </div>

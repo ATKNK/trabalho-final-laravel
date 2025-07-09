@@ -17,7 +17,13 @@ return new class extends Migration
             $table->foreignId('playerId')->constrained('players');
             $table->foreignId('weaponId')->constrained('weapons');
             $table->foreignId('armorId')->constrained('armors');
-            $table->foreignId('accessoriesId')->constrained('accessories');
+            $table->foreignId('accessory1Id')->nullable()->constrained('accessories');
+            $table->foreignId('accessory2Id')->nullable()->constrained('accessories');
+            $table->foreignId('accessory3Id')->nullable()->constrained('accessories');
+            $table->foreignId('accessory4Id')->nullable()->constrained('accessories');
+            $table->foreignId('accessory5Id')->nullable()->constrained('accessories');
+            $table->foreignId('accessory6Id')->nullable()->constrained('accessories');
+            $table->foreignId('accessory7Id')->nullable()->constrained('accessories');
             $table->timestamps();
             $table->softDeletes();
         });

@@ -48,20 +48,82 @@
                         </select>
                     </div>
 
-                    <div class="flex flex-row justify-between m-3">
-                        <label class="text-lg" for="accessoryId">Accessory: </label>
-                        <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="acessoryId" required>
-                            <option value="">Select an Accessory</option>
-                            @foreach ($accessories as $accessory)
-                                <option style="color: {{ $accessory->rarity_color }}" value="{{ $accessory->id }}">
-                                    {{ $accessory->name }}
-                                </option>
-                            @endforeach
-                        </select>
+                    <div class="flex flex-col">
+                        <div class="flex flex-row justify-between m-3">
+                            <label class="text-lg" for="accessory1Id">Accessory:</label>
+                            <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="accessory1Id"
+                                id="accessory1Id">
+                                <option value="{{ null }}">-</option>
+                                @foreach ($accessories as $accessory)
+                                    <option value="{{ $accessory->id }}">{{ $accessory->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="flex flex-row justify-between m-3">
+                            <label class="text-lg" for="accessory2Id">Accessory:</label>
+                            <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="accessory2Id"
+                                id="accessory2Id">
+                                <option value="{{ null }}">-</option>
+                                @foreach ($accessories as $accessory)
+                                    <option value="{{ $accessory->id }}">{{ $accessory->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="flex flex-row justify-between m-3">
+                            <label class="text-lg" for="accessory3Id">Accessory:</label>
+                            <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="accessory3Id"
+                                id="accessory3Id">
+                                <option value="{{ null }}">-</option>
+                                @foreach ($accessories as $accessory)
+                                    <option value="{{ $accessory->id }}">{{ $accessory->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="flex flex-row justify-between m-3">
+                            <label class="text-lg" for="accessory4Id">Accessory:</label>
+                            <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="accessory4Id"
+                                id="accessory4Id">
+                                <option value="{{ null }}">-</option>
+                                @foreach ($accessories as $accessory)
+                                    <option value="{{ $accessory->id }}">{{ $accessory->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="flex flex-row justify-between m-3">
+                            <label class="text-lg" for="accessory5Id">Accessory:</label>
+                            <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="accessory5Id"
+                                id="accessory5Id">
+                                <option value="{{ null }}">-</option>
+                                @foreach ($accessories as $accessory)
+                                    <option value="{{ $accessory->id }}">{{ $accessory->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="flex flex-row justify-between m-3">
+                            <label class="text-lg" for="accessory6Id">Accessory:</label>
+                            <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="accessory6Id"
+                                id="accessory6Id">
+                                <option value="{{ null }}">-</option>
+                                @foreach ($accessories as $accessory)
+                                    <option value="{{ $accessory->id }}">{{ $accessory->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                        <div class="flex flex-row justify-between m-3">
+                            <label class="text-lg" for="accessory7Id">Accessory:</label>
+                            <select class="border-1 border-stone-950 bg-stone-800 rounded-xl p-1" name="accessory7Id"
+                                id="accessory7Id">
+                                @foreach ($accessories as $accessory)
+                                    <option value="{{ $accessory->id }}">{{ $accessory->name }}</option>
+                                @endforeach
+                            </select>
+                        </div>
                     </div>
-                    <button class="bg-sky-600 p-3 rounded-xl cursor-pointer" style="text-shadow: 2px 2px 2px black" type="submit">Save</button>
+                    <button class="bg-sky-600 p-3 rounded-xl cursor-pointer" style="text-shadow: 2px 2px 2px black"
+                        type="submit">Save</button>
                 </div>
-            </form>
         </div>
+        </form>
+    </div>
     </div>
 @endsection

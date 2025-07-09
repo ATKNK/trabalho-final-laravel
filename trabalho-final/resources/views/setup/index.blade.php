@@ -23,9 +23,6 @@
                         <li class="flex flex-row">Armor: <p style="color: {{ $setup->armor->rarity_color }}">
                                 {{ $setup->armor->name }}</p>
                         </li>
-                        <li class="flex flex-row">Accessory: <p style="color: {{ $setup->accessory->rarity_color }}">
-                                {{ $setup->accessory->name }}</p>
-                        </li>
                         <li class="flex flex-row">Class: {{ $setup->player->PlayerClass->name }}</li>
                     </ul>
                     <div class="flex flex-row justify-between items-center">

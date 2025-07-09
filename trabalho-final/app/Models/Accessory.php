@@ -13,11 +13,15 @@ class Accessory extends Model
 
     protected $fillable = [
         'name',
-        'effect',
+        'modifierId',
         'effectModifier',
         'rarity',
         'classId',
     ];
+
+    public function Modifier(){
+        return $this->belongsTo(Modifier::class, 'modifierId');
+    }
 
     public function Setup()
     {

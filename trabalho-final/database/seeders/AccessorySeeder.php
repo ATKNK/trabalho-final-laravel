@@ -18,6 +18,7 @@ class AccessorySeeder extends Seeder
             ["name" => "Pygmy Necklace", "modifierId"=> 4, "effectModifier"=> 1, 'rarity'=> 7, "classId"=>4],
             ["name" => "Arcane Flower", "modifierId"=> 7, "effectModifier"=> 8, 'rarity'=> 7, "classId"=>3],
             ["name" => "Recon Scope", "modifierId"=> 2, "effectModifier"=> 10, 'rarity'=> 7, "classId"=>2],
+            ["name" => "Shackle", "modifierId"=> 3, "effectModifier"=> 1, 'rarity'=>1, "classId=1"],
         ];
         DB::table('accessories')->insert($data);
     }
